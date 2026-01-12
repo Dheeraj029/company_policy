@@ -1,4 +1,44 @@
 
+# 📘 Company Policy Search System (Azure AI RAG)
+
+An enterprise-style **PDF-based Policy Search System** built using **Azure Blob Storage, Azure AI Search, and Azure OpenAI**.  
+This project demonstrates **Retrieval-Augmented Generation (RAG)** using Azure services with enterprise-grade authentication.
+
+---
+
+## 🎯 Project Objective
+
+The goal of this project is to build a backend AI system that:
+
+- Uploads company policy PDFs securely to Azure Blob Storage
+- Indexes documents using Azure AI Search
+- Retrieves relevant content based on user queries
+- Generates accurate, context-aware answers using Azure OpenAI
+- Uses enterprise authentication (Azure Identity) instead of hardcoded secrets
+
+This project focuses on **AI system design**, not UI or frontend development.
+
+---
+
+## 🧠 What This System Does
+
+1. Uploads PDF documents using Azure Identity (`az login`)
+2. Indexes policy documents using Azure AI Search
+3. Filters documents per user using server-side search filters
+4. Generates answers using Azure OpenAI strictly from retrieved context
+5. Prevents hallucinations by enforcing context-only responses
+
+---
+
+## 🔐 Authentication Model
+
+| Azure Service        | Authentication Method |
+|---------------------|----------------------|
+| Blob Storage        | Azure Identity       |
+| Azure AI Search     | API Key              |
+| Azure OpenAI        | API Key              |
+
+This mirrors real-world enterprise Azure architecture.
 
 ---
 
